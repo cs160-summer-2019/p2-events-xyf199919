@@ -21,7 +21,7 @@
 				<h3>Task 1b</h3>
 			</div>
 			<div class="col-6">
-				<button class="btn btn-light float-right">
+				<button class="btn btn-light float-right" id = "stop">
 					Stop
 				</button>
 			</div>
@@ -41,6 +41,24 @@
 <script type="text/javascript">
 
 	// your solution here
+  
+  $(document).ready(() => {
+    
+    var timer = setInterval(function(){ 
+       
+      const $newdiv = $("<div class='p2-circle bg-blue'></div>");
+      $( ".shape-container" ).append($newdiv);
+    
+    }, 1000);
+    
+    $('#stop').on('click', () => {
+      clearInterval(timer);
+    })
+    
+    
+    
+  })
+  
 
 </script>
 </body>
